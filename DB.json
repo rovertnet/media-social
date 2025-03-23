@@ -10,5 +10,27 @@
       "name": "Jane Doe",
       "email": ""
     }
-  ]
+  ],
+  "posts" : [
+    {
+      "id": 1,
+      "title": "Hello World",
+      "content": "Welcome to learning JSON Server"
+    },
+    {
+      "id": 2,
+      "title": "Lorem Ipsum",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+    }
+  ],
+  "comments" : [
+    {
+      "id": 1,
+      "body": "Some comment",
+      "postId": 1
+    }
+  ],
+  "profile" : {
+    "name": "typicode"
+  }
 }
