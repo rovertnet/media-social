@@ -2,6 +2,7 @@ import React from 'react'
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 export default function SignUp() {
@@ -14,7 +15,7 @@ export default function SignUp() {
           Créez un compte pour accéder à votre espace personnel
         </p>
 
-        <div className="flex justify-center items-center my-5">
+        <div className="flex justify-center items-center my-5 gap-8">
           <div className="border-[1px] border-gray-300 rounded-md py-2 px-2">
             <FaGoogle className="text-3xl text-blue-600 font-bold" />
           </div>
@@ -24,7 +25,7 @@ export default function SignUp() {
           </div>
 
           <div className="border-[1px] border-gray-300 rounded-md py-2 px-2">
-            <FaApple className="text-3xl text-blue-600 font-bold" />
+            <FaApple className="text-3xl text-black font-bold" />
           </div>
         </div>
 
@@ -92,10 +93,19 @@ export default function SignUp() {
           <div className="flex items-center justify-between">
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-blue-500 hover:bg-blue-700 text-white cursor-pointer font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
               S'inscrire
             </button>
+          </div>
+
+          <div className="mt-5">
+            <p className="text-center text-gray-500">
+              Vous avez déjà un compte ?{' '}
+              <Link to="/connexion" className="text-blue-500">
+                Connectez-vous
+              </Link>
+            </p>
           </div>
         </form>
       </div>
