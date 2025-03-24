@@ -54,7 +54,7 @@ export default function SignIn() {
                   name="password"
                   id="password"
                   placeholder="Mot de passe"
-                  {...register("password", { required: true })}
+                  {...register("password", { required: "Veuillez saisir " })}
                   className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
@@ -71,7 +71,7 @@ export default function SignIn() {
               <div className="mt-5">
                 <p className="text-start text-gray-500">
                   Vous avez déjà un compte ?{' '}
-                  <Link to="/connexion" className="text-blue-500">
+                  <Link to="/inscription" className="text-blue-500">
                     Inscrivez-vous
                   </Link>
                 </p>
