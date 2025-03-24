@@ -7,7 +7,12 @@ import { useForm } from "react-hook-form";
 
 export default function SignUp() {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data, errors);
+  const onSubmit = data => {
+    if (data.password !== data.password_confirmation) {
+      alert("Les mots de passe ne correspondent pas");
+      return;
+    }
+  }
 
   return (
     <>
