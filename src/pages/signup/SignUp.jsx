@@ -4,13 +4,17 @@ import { FaFacebook } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function SignUp() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => {
     if (data.password !== data.password_confirmation) {
-      alert("Les mots de passe ne correspondent pas");
+      toast.error("Les mots de passe ne correspondent pas");
       return;
+    }else{
+      console.log(data);
+      toast.success("Les mots de passe ne correspondent pas");
     }
   }
 
