@@ -4,24 +4,37 @@ import { FaFacebook } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import axios from 'axios';
 
 export default function SignUp() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => {
     if (data.password !== data.password_confirmation) {
-      toast.error("Les mots de passe ne correspondent pas");
+      toast.error(
+        "Les mots de passe ne correspondent pas"
+      );
       return;
     }else{
-      axios.post("http://localhost:3000/users", data).then((response) => {
-        console.log(response.data);
-        toast.success("Inscription réussie");
+      axios.get(`http://localhost:3000/users=${data.email}`).then((response) => {
+        if (response.data.length > 0) {
+          toast.error(
+            "Un compte existe déjà avec cet email"
+          );
+          return;
+        }else{
+          axios
+            .post("http://localhost:3000/users", data)
+            .then((response) => {
+              console.log(response.data);
+              toast.success("Inscription réussie");
+            })
+            .catch((error) => {
+              console.error(error);
+              toast.success("Les mots de passe ne correspondent pas");
+            });
+        }
       })
-      .catch((error) => {
-        console.error(error);
-        toast.success("Les mots de passe ne correspondent pas");
-      });
     }
   }
 
