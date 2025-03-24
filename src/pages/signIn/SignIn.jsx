@@ -3,8 +3,13 @@ import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 export default function SignIn() {
+
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = data => console.log(data);
+
   return (
     <>
           <div className="bg-white px-10 py-10 rounded-md m-20 md:w-1/2 md:mt-20 md:mx-auto block">
@@ -28,7 +33,7 @@ export default function SignIn() {
               </div>
             </div>
     
-            <form className="mt-5">
+            <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
     
               <div className="mb-4">
                 
@@ -37,6 +42,7 @@ export default function SignIn() {
                   name="email"
                   id="email"
                   placeholder="Adresse email"
+                  {...register("email", { required: true })}
                   className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
@@ -48,6 +54,7 @@ export default function SignIn() {
                   name="password"
                   id="password"
                   placeholder="Mot de passe"
+                  {...register("password", { required: true })}
                   className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
