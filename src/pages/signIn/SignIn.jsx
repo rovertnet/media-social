@@ -42,7 +42,7 @@ export default function SignIn() {
                   name="email"
                   id="email"
                   placeholder="Adresse email"
-                  {...register("email", { required: true })}
+                  {...register("email", { required: "Veuillez saisir votre adresse e-mail", pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i, message: "Adresse e-mail invalide" } })}
                   className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
@@ -54,7 +54,7 @@ export default function SignIn() {
                   name="password"
                   id="password"
                   placeholder="Mot de passe"
-                  {...register("password", { required: "Veuillez saisir " })}
+                  {...register("password", { required: "Veuillez saisir votre mot de passe", minLength: { value: 8, message: "Le mot de passe doit contenir au moins 8 caractères" } })}
                   className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
               </div>
