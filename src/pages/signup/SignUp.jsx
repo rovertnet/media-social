@@ -5,6 +5,7 @@ import { FaApple } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from 'react-hot-toast';
+import axios from 'axios';
 
 export default function SignUp() {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -13,7 +14,11 @@ export default function SignUp() {
       toast.error("Les mots de passe ne correspondent pas");
       return;
     }else{
-      console.log(data);
+      axios.post("http://localhost:3000/users", data).then((response) => {
+        console.log(response.data);
+        toast.success("Inscription réussie");
+      });
+        
       toast.success("Les mots de passe ne correspondent pas");
     }
   }
