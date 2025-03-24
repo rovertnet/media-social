@@ -14,14 +14,12 @@ export default function SignUp() {
       toast.error(
         "Les mots de passe ne correspondent pas"
       );
-      return;
     }else{
       axios.get(`http://localhost:3000/users?emailUsers=${data.emailUsers}`).then((response) => {
         if (response.data.length > 0) {
           toast.error(
             "Un compte existe déjà avec cet email"
           );
-          return;
         }else{
           axios
             .post("http://localhost:3000/users", data)
