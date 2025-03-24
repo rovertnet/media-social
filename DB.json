@@ -1,17 +1,14 @@
 {
-  "users" : [
+  "users": [
     {
-      "id": 1,
-      "name": "John Doe",
-      "email": ""
-    },
-    {
-      "id": 2,
-      "name": "Jane Doe",
-      "email": ""
+      "id": "dabb",
+      "username": "robert",
+      "email": "rovertnet.roberto@gmail.com",
+      "password": "12345678",
+      "password_confirmation": "12345678"
     }
   ],
-  "posts" : [
+  "posts": [
     {
       "id": 1,
       "title": "Hello World",
@@ -23,14 +20,14 @@
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     }
   ],
-  "comments" : [
+  "comments": [
     {
       "id": 1,
       "body": "Some comment",
       "postId": 1
     }
   ],
-  "profile" : {
+  "profile": {
     "name": "typicode"
   }
 }
