@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 
 export default function SignUp() {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => console.log(data, errors);
 
   return (
     <>
@@ -40,7 +40,7 @@ export default function SignUp() {
               name="username"
               id="username"
               placeholder="Nom d\'utilisateur"
-              {...register("username", { required: true })}
+              {...register("username", { required: "Veuillez saisir votre nom", minLength: { value: 3, message: "Le nom doit contenir au moins 3 caractères" } })}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
@@ -52,7 +52,7 @@ export default function SignUp() {
               name="email"
               id="email"
               placeholder="Adresse email"
-              {...register("email", { required: true })}
+              {...register("email", { required: "Veuillez saisir votre adresse e-mail", pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i, message: "Adresse e-mail invalide" } })}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
@@ -64,7 +64,7 @@ export default function SignUp() {
               name="password"
               id="password"
               placeholder="Mot de passe"
-              {...register("password", { required: true })}
+              {...register("password", { required: "Veuillez saisir votre mot de passe", minLength: { value: 8, message: "Le mot de passe doit contenir au moins 8 caractères" } })}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
@@ -76,7 +76,7 @@ export default function SignUp() {
               name="password_confirmation"
               id="password_confirmation"
               placeholder="Confirmer le mot de passe"
-              {...register("password_confirmation", { required: true })}
+              {...register("password_confirmation", { required: "Veuillez confirmer votre mot de passe", minLength: { value: 8, message: "Le mot de passe doit contenir au moins 8 caractères" } })}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
