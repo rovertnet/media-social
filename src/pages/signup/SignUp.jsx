@@ -100,7 +100,7 @@ export default function SignUp() {
           </div>
 
           <div className="mt-5">
-            <p className="text-center text-gray-500">
+            <p className="text-start text-gray-500">
               Vous avez déjà un compte ?{' '}
               <Link to="/connexion" className="text-blue-500">
                 Connectez-vous
