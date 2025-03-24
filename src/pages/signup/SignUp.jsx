@@ -9,7 +9,11 @@ export default function SignUp() {
 
         <p className="text-center text-gray-500 mt-2">Créez un compte pour accéder à votre espace personnel</p>
 
-        <div className=""></div>
+        <div className="flex justify-center items-center my-5">
+          <div className="border-[1px] border-gray-300 rounded-md py-2 px-2">
+            
+          </div>
+        </div>
 
         <form className="mt-5">
           <div className="mb-4">
