@@ -17,9 +17,11 @@ export default function SignUp() {
       axios.post("http://localhost:3000/users", data).then((response) => {
         console.log(response.data);
         toast.success("Inscription réussie");
+      })
+      .catch((error) => {
+        console.error(error);
+        toast.success("Les mots de passe ne correspondent pas");
       });
-        
-      toast.success("Les mots de passe ne correspondent pas");
     }
   }
 
