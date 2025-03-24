@@ -16,7 +16,7 @@ export default function SignUp() {
       );
       return;
     }else{
-      axios.get(`http://localhost:3000/users?email=${data.}`).then((response) => {
+      axios.get(`http://localhost:3000/users?emailUsers=${data.emailUsers}`).then((response) => {
         if (response.data.length > 0) {
           toast.error(
             "Un compte existe déjà avec cet email"
@@ -78,7 +78,7 @@ export default function SignUp() {
             
             <input
               type="email"
-              name="email"
+              name="emailUsers"
               id="email"
               placeholder="Adresse email"
               {...register("email", { required: "Veuillez saisir votre adresse e-mail", pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i, message: "Adresse e-mail invalide" } })}
