@@ -2,12 +2,14 @@ import React from 'react'
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import toast from 'react-hot-toast';
 import axios from 'axios';
 
 export default function SignUp() {
+  const navigate = useNavigate();
+
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => {
     if (data.password !== data.password_confirmation) {
@@ -15,7 +17,7 @@ export default function SignUp() {
         "Les mots de passe ne correspondent pas"
       );
     }else{
-      axios.get(`http://localhost:3000/users?emailUsers=${data.emailUsers}`)
+      axios.get(`http://localhost:3000/users?email=${data.email}`)
       .then((response) => {
           if (response.data.length > 0) {
             toast.error(
@@ -27,6 +29,7 @@ export default function SignUp() {
               .then((response) => {
                 console.log(response.data);
                 toast.success("Inscription réussie");
+                navigate("/connexion");
               })
               .catch((err) => {
                 console.error(err);

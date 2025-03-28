@@ -20,6 +20,27 @@
       "email": "matu@gmail.com",
       "password": "12345678",
       "password_confirmation": "12345678"
+    },
+    {
+      "id": "ef80",
+      "username": "moi",
+      "email": "matundu@yahoo.fr",
+      "password": "12345678",
+      "password_confirmation": "12345678"
+    },
+    {
+      "id": "6cb2",
+      "username": "roro",
+      "email": "rovertnet.roberto2@gmail.com",
+      "password": "Rob1234@",
+      "password_confirmation": "Rob1234@"
+    },
+    {
+      "id": "67f0",
+      "username": "Robnet",
+      "email": "rr@gmail.com",
+      "password": "12345678",
+      "password_confirmation": "12345678"
     }
   ],
   "posts": [
