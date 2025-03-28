@@ -32,7 +32,7 @@ export default function SignIn() {
             <h1 className="text-2xl font-bold text-center">Inscription</h1>
     
             <p className="text-center text-gray-500 mt-2">
-              Créez un compte pour accéder à votre espace personnel
+              Connectez vous à votre compte pour accéder à votre espace personnel!
             </p>
     
             <div className="flex justify-center items-center my-5 gap-8">

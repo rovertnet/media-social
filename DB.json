@@ -41,6 +41,13 @@
       "email": "rr@gmail.com",
       "password": "12345678",
       "password_confirmation": "12345678"
+    },
+    {
+      "id": "4652",
+      "username": "Josue",
+      "email": "josue@gmail.com",
+      "password": "12345678",
+      "password_confirmation": "12345678"
     }
   ],
   "posts": [
