@@ -11,25 +11,19 @@ export default function SignIn() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => {
-    if (data.password !== data.password_confirmation) {
-      toast.error(
-        "Les mots de passe ne correspondent pas"
-      );
-    }else{
-      axios.get(`http://localhost:3000/users?email=${data.email}&password=${data.password}`)
+    axios.get(`http://localhost:3000/users?email=${data.email}&password=${data.password}`)
       .then((response) => {
         if (response.data.length > 0) {
           toast.success("Connexion réussie");
-          Navigate("/home")
-        }else {
+          Navigate("/");
+        } else {
           toast.error("Identifiants invalides");
         }
-      }).catch((err) => {
+      })
+      .catch((err) => {
         console.error(err);
         toast.error("Une erreur s'est produite");
       });
-      
-    }
   }
 
   return (
