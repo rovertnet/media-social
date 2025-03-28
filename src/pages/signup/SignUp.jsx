@@ -17,8 +17,7 @@ export default function SignUp() {
     }else{
       axios.get(`http://localhost:3000/users?emailUsers=${data.emailUsers}`)
       .then((response) => {
-          const existingUser = response.data.find(user => user.emailUsers === data.emailUsers);
-          if (existingUser) {
+          if (response.data.length > 0) {
             toast.error(
               "Un compte existe déjà avec cet email"
             );
