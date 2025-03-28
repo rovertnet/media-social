@@ -17,19 +17,24 @@ export default function SignUp() {
     }else{
       axios.get(`http://localhost:3000/users?emailUsers=${data.emailUsers}`)
       .then((response) => {
-          toast.error(
-            "Un compte existe déjà avec cet email"
-          );
-          axios
-            .post("http://localhost:3000/users", data)
-            .then((response) => {
-              console.log(response.data);
-              toast.success("Inscription réussie");
-            })
-            .catch((error) => {
-              console.error(error);
-              toast.success("Une erreur s'est produite");
-            });
+          const existingUser = response.data.find(user => user.emailUsers === data.emailUsers);
+          if (existingUser) {
+            toast.error(
+              "Un compte existe déjà avec cet email"
+            );
+            return;
+          }else {
+            axios
+              .post("http://localhost:3000/users", data)
+              .then((response) => {
+                console.log(response.data);
+                toast.success("Inscription réussie");
+              })
+              .catch((error) => {
+                console.error(error);
+                toast.success("Une erreur s'est produite");
+              });
+          }
       })
     }
   }
