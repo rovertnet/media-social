@@ -15,12 +15,11 @@ export default function SignUp() {
         "Les mots de passe ne correspondent pas"
       );
     }else{
-      axios.get(`http://localhost:3000/users?emailUsers=${data.emailUsers}`).then((response) => {
-        if (response.data.length > 0) {
+      axios.get(`http://localhost:3000/users?emailUsers=${data.emailUsers}`)
+      .then((response) => {
           toast.error(
             "Un compte existe déjà avec cet email"
           );
-        }else{
           axios
             .post("http://localhost:3000/users", data)
             .then((response) => {
@@ -31,7 +30,6 @@ export default function SignUp() {
               console.error(error);
               toast.success("Une erreur s'est produite");
             });
-        }
       })
     }
   }

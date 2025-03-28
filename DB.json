@@ -6,23 +6,37 @@
       "email": "rovertnet.roberto@gmail.com",
       "password": "12345678",
       "password_confirmation": "12345678"
+    },
+    {
+      "id": "bd23",
+      "username": "Robert",
+      "email": "matu@gmail.com",
+      "password": "1234567890",
+      "password_confirmation": "1234567890"
+    },
+    {
+      "id": "446a",
+      "username": "robert",
+      "email": "matu@gmail.com",
+      "password": "12345678",
+      "password_confirmation": "12345678"
     }
   ],
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Hello World",
       "content": "Welcome to learning JSON Server"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Lorem Ipsum",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     }
   ],
   "comments": [
     {
-      "id": 1,
+      "id": "1",
       "body": "Some comment",
       "postId": 1
     }
