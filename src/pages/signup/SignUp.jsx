@@ -21,7 +21,6 @@ export default function SignUp() {
             toast.error(
               "Un compte existe déjà avec cet email"
             );
-            return;
           }else {
             axios
               .post("http://localhost:3000/users", data)
@@ -29,9 +28,9 @@ export default function SignUp() {
                 console.log(response.data);
                 toast.success("Inscription réussie");
               })
-              .catch((error) => {
-                console.error(error);
-                toast.success("Une erreur s'est produite");
+              .catch((err) => {
+                console.error(err);
+                toast.error("Une erreur s'est produite");
               });
           }
       })
