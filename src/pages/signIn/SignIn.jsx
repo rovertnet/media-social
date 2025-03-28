@@ -2,13 +2,35 @@ import React from 'react'
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import toast from 'react-hot-toast';
+import axios from 'axios';
 
 export default function SignIn() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => {
+    if (data.password !== data.password_confirmation) {
+      toast.error(
+        "Les mots de passe ne correspondent pas"
+      );
+    }else{
+      axios.get(`http://localhost:3000/users?email=${data.email}&password=${data.password}`)
+      .then((response) => {
+        if (response.data.length > 0) {
+          toast.success("Connexion réussie");
+          Navigate("/home")
+        }else {
+          toast.error("Identifiants invalides");
+        }
+      }).catch((err) => {
+        console.error(err);
+        toast.error("Une erreur s'est produite");
+      });
+      
+    }
+  }
 
   return (
     <>
