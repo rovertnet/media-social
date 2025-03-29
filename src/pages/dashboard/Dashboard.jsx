@@ -22,11 +22,11 @@ export default function Dashboard() {
       <NavBars />
 
       <div className="flex justify-center items-center  py-10">
-        <div className=" bg-white mt-20 w-full mx-40 rounded-lg ">
-            <div className="flex justify-center items-center gap-5 px-10 py-5 bg-white rounded-lg">
+        <div className=" bg-white mt-20 w-full mx-44 rounded-lg ">
+            <div className="flex justify-between items-center gap-5 px-10 py-5 bg-white rounded-lg">
               <FaUserCircle className="text-4xl font-extrabold text-gray-300 " />
               <button
-                className="bg-gray-200 hover:bg-gray-400 text-gray-400 text-start font-bold py-2 px-16 rounded-full focus:outline-none focus:shadow-outline"
+                className="bg-gray-100 hover:bg-gray-200 text-gray-400 cursor-pointer text-start font-bold py-2 px-28 rounded-full focus:outline-none focus:shadow-outline"
                 onClick={() => setShowModal(true)}
               >
                 {session ? (

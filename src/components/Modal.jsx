@@ -16,7 +16,7 @@ const Modal = ({ showModal, setShowModal }) => {
 
   return (
     <div className="fixed inset-0 bg-opacity-50 overflow-y-auto h-full w-full">
-      <div className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+      <div className="relative top-28 mx-44 p-5 border shadow-lg rounded-md bg-white">
         <div className="mt-3 text-center">
           <div className="flex justify-between">
             <h3 className="text-lg leading-6 font-extrabold text-gray-900">
@@ -27,7 +27,7 @@ const Modal = ({ showModal, setShowModal }) => {
               type="button"
               onClick={() => setShowModal(false)}
             >
-              <IoMdClose className="font-bold text-2xl text-gray-900" />
+              <IoMdClose className="font-bold text-2xl text-gray-900 cursor-pointer" />
             </button>
           </div>
           <hr className="text-gray-400 mt-1.5" />
