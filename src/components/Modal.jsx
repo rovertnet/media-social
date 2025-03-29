@@ -19,7 +19,7 @@ const Modal = ({ showModal, setShowModal }) => {
       <div className="relative top-28 mx-44 p-5 border shadow-lg rounded-md bg-white">
         <div className="mt-3 text-center">
           <div className="flex justify-between">
-            <h3 className="text-lg leading-6 font-extrabold text-gray-900">
+            <h3 className="text-2xl leading-6 font-extrabold text-gray-900">
               Créez un post
             </h3>
             <button
@@ -55,7 +55,7 @@ const Modal = ({ showModal, setShowModal }) => {
               <div className="flex items-center justify-between">
                 <button
                   type="submit"
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 rounded focus:outline-none focus:shadow-outline"
                 >
                   Poster
                 </button>
