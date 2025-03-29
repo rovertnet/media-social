@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaApple, FaFacebook, FaGoogle } from 'react-icons/fa'
 
 export default function NavBars() {
   return (
