@@ -82,7 +82,8 @@ export default function SignUp() {
                 },
                 pattern: {
                   value: /^[a-zA-Z0-9]+$/i,
-                  message: "Le nom ne doit contenir que des lettres et des chiffres",
+                  message:
+                    "Le nom ne doit contenir que des lettres et des chiffres",
                 },
                 validate: (value) => {
                   const usernameRegex = /^[a-zA-Z0-9]+$/;
@@ -90,11 +91,39 @@ export default function SignUp() {
                     usernameRegex.test(value) ||
                     "Le nom ne doit contenir que des lettres et des chiffres"
                   );
-                }
+                },
               })}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
-            {errors.username && <p className="text-red-500 text-xs italic">{errors.username.message}</p>}
+            {errors.username && (
+              <p className="text-red-500 text-xs italic">
+                {errors.username.message}
+              </p>
+            )}
+          </div>
+
+          <div className="mb-4">
+            <input
+              type="text"
+              id="name"
+              placeholder="Url de l'image"
+              {...register(
+                "urlimage",
+                { required: "Veuillez fournir le lien de votre image" },
+                {
+                  pattern: {
+                    value: /^(https?:\/\/.*\.(?:png|jpg|jpeg|gif|webp))$/i,
+                    message: "Veuillez fournir un lien valide",
+                  },
+                }
+              )}
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+            {errors.urlimage && (
+              <p className="text-red-500 text-xs italic">
+                {errors.urlimage.message}
+              </p>
+            )}
           </div>
 
           <div className="mb-4">
@@ -115,11 +144,15 @@ export default function SignUp() {
                     emailRegex.test(value) ||
                     "Veuillez entrer une adresse e-mail valide"
                   );
-                }
+                },
               })}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
-            {errors.email && <p className="text-red-500 text-xs italic">{errors.email.message}</p>}
+            {errors.email && (
+              <p className="text-red-500 text-xs italic">
+                {errors.email.message}
+              </p>
+            )}
           </div>
 
           <div className="mb-4">
@@ -141,19 +174,21 @@ export default function SignUp() {
                   const hasNumber = /[0-9]/.test(value);
                   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
                   return (
-                    (
-                      hasUpperCase &&
+                    (hasUpperCase &&
                       hasLowerCase &&
                       hasNumber &&
-                      hasSpecialChar
-                    ) ||
+                      hasSpecialChar) ||
                     "Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial"
                   );
                 },
               })}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
-            {errors.password && <p className="text-red-500 text-xs italic">{errors.password.message}</p>}
+            {errors.password && (
+              <p className="text-red-500 text-xs italic">
+                {errors.password.message}
+              </p>
+            )}
           </div>
 
           <div className="mb-4">
@@ -175,19 +210,21 @@ export default function SignUp() {
                   const hasNumber = /[0-9]/.test(value);
                   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
                   return (
-                    (
-                      hasUpperCase &&
+                    (hasUpperCase &&
                       hasLowerCase &&
                       hasNumber &&
-                      hasSpecialChar
-                    ) ||
+                      hasSpecialChar) ||
                     "Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial"
                   );
                 },
               })}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
-            {errors.password_confirmation && <p className="text-red-500 text-xs italic">{errors.password_confirmation.message}</p>}
+            {errors.password_confirmation && (
+              <p className="text-red-500 text-xs italic">
+                {errors.password_confirmation.message}
+              </p>
+            )}
           </div>
 
           <div className="flex items-center justify-between">

@@ -84,6 +84,7 @@ export default function Dashboard() {
                 <div key={post.id} className="flex flex-col gap-5 my-5 w-full ">
                   <div className="flex justify-start items-center gap-5 pl-5">
                     <FaUserCircle className="text-6xl font-extrabold text-gray-300" />
+                    
                     <div className="flex flex-col gap-1 pb-2">
                       <h1 className="text-xl font-bold text-gray-500 pt-1.5">
                         {post.auteur}
