@@ -10,9 +10,6 @@ const Modal = ({ showModal, setShowModal }) => {
     toast.success("Votre post a été créé avec succès !");
     setShowModal(false);
   }
-  const onError = (errors) => {
-    toast.error("Une erreur s'est produite lors de la création du post.");
-  };
 
   return (
     <div className="fixed inset-0 bg-opacity-50 overflow-y-auto h-full w-full">
@@ -32,7 +29,7 @@ const Modal = ({ showModal, setShowModal }) => {
           </div>
           <hr className="text-gray-400 mt-1.5" />
           <div className="mt-2 px-7 py-6">
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div className="mb-4">
                 <textarea
                   id="message"
@@ -40,17 +37,20 @@ const Modal = ({ showModal, setShowModal }) => {
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   rows="4"
                   cols="50"
-                  {...register("message", { required: true })}
-                ></textarea>
+                  {...register("post", { required: "Weuillez saisir votre texte", minLength: { value: 7, message: "Le post doit contenir au moins 7 caractères" }, maxLength: { value: 512, message: "Le post doit contenir au maximum 512 caractères" }})}
+                >
+                  {errors.post && <p className="text-red-500 text-xs italic">{errors.post.message}</p>}
+                </textarea>
               </div>
               <div className="mb-4">
                 <input
                   type="text"
                   id="name"
                   placeholder="Url de l'image"
-                  {...register("name", { required: true })}
+                  {...register("urlimage", { required: "Veuillez fournir le lien de votre image" }, { pattern: { value: /^(https?:\/\/.*\.(?:png|jpg|jpeg|gif|webp))$/i, message: "Veuillez fournir un lien valide" }})}
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 />
+                {errors.urlimage && <p className="text-red-500 text-xs italic">{errors.urlimage.message}</p>}
               </div>
               <div className="flex items-center justify-between">
                 <button
