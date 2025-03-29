@@ -23,13 +23,15 @@ const Modal = ({ showModal, setShowModal }) => {
               Créez un post
             </h3>
             <button
-              className="px-4 py-2 bg-gray-300 text-base font-medium rounded-full shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-red-300"
+              className="px-2 py-2 bg-gray-300 mb-3 text-base font-medium rounded-full shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2"
+              type="button"
               onClick={() => setShowModal(false)}
             >
               <IoMdClose className="font-bold text-2xl text-gray-900" />
             </button>
           </div>
-          <div className="mt-2 px-7 py-3">
+          <hr className="text-gray-400 mt-1.5" />
+          <div className="mt-2 px-7 py-6">
             <form>
               <div className="mb-4">
                 <textarea
