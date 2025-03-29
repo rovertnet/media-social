@@ -8,7 +8,9 @@ import { IoMdVideocam } from "react-icons/io";
 import { FaPhotoVideo } from "react-icons/fa";
 import { MdMood } from "react-icons/md";
 import axios from 'axios';
-
+import { AiOutlineLike } from "react-icons/ai";
+import { AiOutlineComment } from "react-icons/ai";
+import { AiOutlineShareAlt } from "react-icons/ai";
 
 
 export default function Dashboard() {
@@ -86,9 +88,7 @@ export default function Dashboard() {
                       <h1 className="text-xl font-bold text-gray-500 pt-1.5">
                         {post.auteur}
                       </h1>
-                      <p className="text-sm text-gray-400">
-                        {post.createdAt}
-                      </p>
+                      <p className="text-sm text-gray-400">{post.createdAt}</p>
                     </div>
                   </div>
                   <p className="text-lg text-gray-700 pl-5">{post.post}</p>
@@ -99,13 +99,18 @@ export default function Dashboard() {
                   />
                 </div>
                 <div className="flex justify-between items-center px-5 py-3">
-                  <button className="bg-gray-100 hover:bg-gray-200 w-full text-gray-400 cursor-pointer text-start font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline">
-                    Commenter
-                  </button>
-                  <button className="bg-gray-100 hover:bg-gray-200 w-full text-gray-400 cursor-pointer text-start font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline">
+                  <button className="bg-gray-100 hover:bg-gray-200 flex space-x-2 w-full text-gray-400 cursor-pointer text-start font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline">
+                    <AiOutlineLike className="font-bold text-lg text-gray-400" />
                     J'aime
                   </button>
-                  <button className="bg-gray-100 hover:bg-gray-200 w-full text-gray-400 cursor-pointer text-start font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline">
+
+                  <button className="bg-gray-100 hover:bg-gray-200 flex space-x-2 w-full text-gray-400 cursor-pointer text-start font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline">
+                    <AiOutlineComment className="font-bold text-lg text-gray-400" />
+                    Commenter
+                  </button>
+
+                  <button className="bg-gray-100 hover:bg-gray-200 flex space-x-2 w-full text-gray-400 cursor-pointer text-start font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline">
+                    <AiOutlineShareAlt className="font-bold text-lg text-gray-400" />
                     Partager
                   </button>
                 </div>
