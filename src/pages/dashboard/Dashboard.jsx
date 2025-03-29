@@ -8,17 +8,17 @@ export default function Dashboard() {
   return (
     <>
       <NavBars />
-      <div className="flex h-screen">
-        <div className="main-content flex-1 my-20 bg-gray-100">
-          {session ? (
-            <div className="session-info flex space-x-3.5 justify-center items-center">
-              <h1 className="text-4xl font-extrabold mb-4">
-                Bonjour {session.username} !
+      <div className="">
+        <div className="flex justify-between items-center mt-24">
+          <div className="flex flex-col justify-center items-center w-full">
+            {session ? (
+              <h1 className="text-2xl font-bold text-gray-500">
+                Bienvenue {session.username}
               </h1>
-            </div>
-          ) : (
-            <p className="text-lg">Loading session...</p>
-          )}
+            ) : (
+              <p className="text-lg">Loading session...</p>
+            )}
+          </div>
         </div>
       </div>
     </>

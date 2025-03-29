@@ -65,49 +65,101 @@ export default function SignUp() {
 
         <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
-            
             <input
               type="text"
               name="username"
               id="username"
               placeholder="Nom d\'utilisateur"
-              {...register("username", { required: "Veuillez saisir votre nom", minLength: { value: 3, message: "Le nom doit contenir au moins 3 caractères" } })}
+              {...register("username", {
+                required: "Veuillez saisir votre nom",
+                minLength: {
+                  value: 3,
+                  message: "Le nom doit contenir au moins 3 caractères",
+                },
+              })}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
 
           <div className="mb-4">
-            
             <input
               type="email"
               name="emailUsers"
               id="email"
               placeholder="Adresse email"
-              {...register("email", { required: "Veuillez saisir votre adresse e-mail", pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i, message: "Adresse e-mail invalide" } })}
+              {...register("email", {
+                required: "Veuillez saisir votre adresse e-mail",
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                  message: "Adresse e-mail invalide",
+                },
+              })}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
 
           <div className="mb-4">
-            
             <input
               type="password"
               name="password"
               id="password"
               placeholder="Mot de passe"
-              {...register("password", { required: "Veuillez saisir votre mot de passe", minLength: { value: 8, message: "Le mot de passe doit contenir au moins 8 caractères" } })}
+              {...register("password", {
+                required: "Veuillez saisir votre mot de passe",
+                minLength: {
+                  value: 8,
+                  message:
+                    "Le mot de passe doit contenir au moins 8 caractères",
+                },
+                validate: (value) => {
+                  const hasUpperCase = /[A-Z]/.test(value);
+                  const hasLowerCase = /[a-z]/.test(value);
+                  const hasNumber = /[0-9]/.test(value);
+                  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
+                  return (
+                    (
+                      hasUpperCase &&
+                      hasLowerCase &&
+                      hasNumber &&
+                      hasSpecialChar
+                    ) ||
+                    "Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial"
+                  );
+                },
+              })}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
 
           <div className="mb-4">
-            
             <input
               type="password"
               name="password_confirmation"
               id="password_confirmation"
               placeholder="Confirmer le mot de passe"
-              {...register("password_confirmation", { required: "Veuillez confirmer votre mot de passe", minLength: { value: 8, message: "Le mot de passe doit contenir au moins 8 caractères" } })}
+              {...register("password_confirmation", {
+                required: "Veuillez confirmer votre mot de passe",
+                minLength: {
+                  value: 8,
+                  message:
+                    "Le mot de passe doit contenir au moins 8 caractères",
+                },
+                validate: (value) => {
+                  const hasUpperCase = /[A-Z]/.test(value);
+                  const hasLowerCase = /[a-z]/.test(value);
+                  const hasNumber = /[0-9]/.test(value);
+                  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(value);
+                  return (
+                    (
+                      hasUpperCase &&
+                      hasLowerCase &&
+                      hasNumber &&
+                      hasSpecialChar
+                    ) ||
+                    "Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial"
+                  );
+                },
+              })}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
@@ -123,7 +175,7 @@ export default function SignUp() {
 
           <div className="mt-5">
             <p className="text-start text-gray-500">
-              Vous avez déjà un compte ?{' '}
+              Vous avez déjà un compte ?{" "}
               <Link to="/connexion" className="text-blue-500">
                 Connectez-vous
               </Link>

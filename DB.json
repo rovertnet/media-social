@@ -6,6 +6,13 @@
       "email": "matundu@gmail.com",
       "password": "12345678",
       "password_confirmation": "12345678"
+    },
+    {
+      "id": "90c9",
+      "username": "Josue",
+      "email": "jo@gmail.com",
+      "password": "12345678",
+      "password_confirmation": "12345678"
     }
   ],
   "posts": [],
