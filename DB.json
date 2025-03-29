@@ -1,75 +1,14 @@
 {
   "users": [
-    {
-      "id": "e966",
-      "username": "rrrr",
-      "email": "rovertnet.roberto@gmail.com",
-      "password": "12345678",
-      "password_confirmation": "12345678"
-    },
-    {
-      "id": "bd23",
-      "username": "Robert",
-      "email": "matu@gmail.com",
-      "password": "1234567890",
-      "password_confirmation": "1234567890"
-    },
-    {
-      "id": "446a",
-      "username": "robert",
-      "email": "matu@gmail.com",
-      "password": "12345678",
-      "password_confirmation": "12345678"
-    },
-    {
-      "id": "ef80",
-      "username": "moi",
-      "email": "matundu@yahoo.fr",
-      "password": "12345678",
-      "password_confirmation": "12345678"
-    },
-    {
-      "id": "6cb2",
-      "username": "roro",
-      "email": "rovertnet.roberto2@gmail.com",
-      "password": "Rob1234@",
-      "password_confirmation": "Rob1234@"
-    },
-    {
-      "id": "67f0",
-      "username": "Robnet",
-      "email": "rr@gmail.com",
-      "password": "12345678",
-      "password_confirmation": "12345678"
-    },
-    {
-      "id": "4652",
-      "username": "Josue",
-      "email": "josue@gmail.com",
-      "password": "12345678",
-      "password_confirmation": "12345678"
-    }
+   
   ],
   "posts": [
-    {
-      "id": "1",
-      "title": "Hello World",
-      "content": "Welcome to learning JSON Server"
-    },
-    {
-      "id": "2",
-      "title": "Lorem Ipsum",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-    }
+    
   ],
   "comments": [
-    {
-      "id": "1",
-      "body": "Some comment",
-      "postId": 1
-    }
+    
   ],
   "profile": {
-    "name": "typicode"
+    
   }
 }

@@ -29,7 +29,9 @@ export default function SignIn() {
   return (
     <>
           <div className="bg-white px-10 py-10 rounded-md m-20 md:w-1/2 md:mt-20 md:mx-auto block">
-            <h1 className="text-2xl font-bold text-center">Inscription</h1>
+            <h1 className="text-2xl font-bold text-center">
+              Connexion
+            </h1>
     
             <p className="text-center text-gray-500 mt-2">
               Connectez vous à votre compte pour accéder à votre espace personnel!
