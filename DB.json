@@ -13,6 +13,13 @@
       "email": "jo@gmail.com",
       "password": "12345678",
       "password_confirmation": "12345678"
+    },
+    {
+      "id": "0f6e",
+      "username": "Dan",
+      "email": "dan@yahoo.com",
+      "password": "Rob1234@",
+      "password_confirmation": "Rob1234@"
     }
   ],
   "posts": [],
