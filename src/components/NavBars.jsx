@@ -9,7 +9,7 @@ export default function NavBars() {
   return (
     <>
       <div className="fixed top-0 right-0 left-0">
-        <div className="flex justify-between items-center bg-white p-4 shadow-md">
+        <div className="flex justify-between items-center bg-white px-10 py-5 shadow-md">
           <div className="flex items-center space-x-4">
             <Link to="/">
               <h1 className="text-2xl font-bold">Logo</h1>
@@ -17,9 +17,9 @@ export default function NavBars() {
           </div>
           <div className="flex space-x-4">
             {session ? (
-              <div className="session-info flex space-x-3.5 justify-center items-center">
+              <div className="session-info flex space-x-1.5 justify-center items-center">
                 <FaUserCircle className="text-4xl font-extrabold text-gray-300 " />
-                <h1 className="text-2xl font-extrabold">
+                <h1 className="text-2xl font-extrabold text-gray-500">
                   {session.username}
                 </h1>
               </div>
