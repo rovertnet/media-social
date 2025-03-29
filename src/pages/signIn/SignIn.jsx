@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaGoogle, FaFacebook, FaApple } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -12,6 +12,13 @@ export default function SignIn() {
     formState: { errors },
   } = useForm();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const user = localStorage.getItem("users");
+    if (user) {
+      navigate("/");
+    }
+  }, [navigate]);
 
   const onSubmit = (data) => {
     axios

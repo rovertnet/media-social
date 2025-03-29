@@ -15,7 +15,7 @@ export default function NavBars() {
               <img src={logo} alt="logo" className='h-12 w-32' />
             </Link>
           </div>
-          <h1 className="font-extrabold text-2xl text-amber-100"></h1>
+          <h1 className="font-extrabold text-2xl text-orange-400 uppercase">RovertNet Social</h1>
           <div className="flex space-x-4">
             {session ? (
               <div className="session-info flex space-x-1.5 justify-center items-center">
