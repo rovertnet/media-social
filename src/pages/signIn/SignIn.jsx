@@ -14,7 +14,7 @@ export default function SignIn() {
     axios.get(`http://localhost:3000/users?email=${data.email}&password=${data.password}`)
       .then((response) => {
         if (response.data.length > 0) {
-          localStorage.setItem("user", JSON.stringify(response.data[0]));
+          localStorage.setItem("users", JSON.stringify(response.data[0]));
           Navigate("/");
           toast.success("Connexion réussie");
         } else {
