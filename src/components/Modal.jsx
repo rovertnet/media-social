@@ -32,23 +32,23 @@ const Modal = ({ showModal, setShowModal }) => {
           <div className="mt-2 px-7 py-3">
             <form>
               <div className="mb-4">
-                
-                <input
-                  type="text"
-                  id="name"
-                  placeholder="Votre nom"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                />
-              </div>
-              <div className="mb-4">
-                
                 <textarea
                   id="message"
                   placeholder="Votre message"
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   rows="4"
                   cols="50"
-                  ></textarea>
+                  {...register("message", { required: true })}
+                ></textarea>
+              </div>
+              <div className="mb-4">
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Url de l'image"
+                  {...register("name", { required: true })}
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
               </div>
               <div className="flex items-center justify-between">
                 <button
