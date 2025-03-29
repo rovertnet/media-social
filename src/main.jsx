@@ -6,6 +6,7 @@ import Dashboard from "./pages/dashboard/Dashboard.jsx"
 import SignUp from './pages/signup/SignUp.jsx'
 import SignIn from './pages/signIn/SignIn.jsx'
 import { Toaster } from 'react-hot-toast'
+import { SessionProvider } from "./context/SessionContext";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Toaster />
-    <RouterProvider router={router}></RouterProvider>
+    <SessionProvider>
+      <Toaster />
+      <RouterProvider router={router}></RouterProvider>
+    </SessionProvider>
   </StrictMode>
 );
