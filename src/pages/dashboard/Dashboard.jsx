@@ -29,9 +29,9 @@ export default function Dashboard() {
       <div className="flex justify-center items-center  py-10">
         <div className=" bg-white mt-20 w-full mx-44 rounded-lg shadow-md">
           <div className="flex justify-between items-center gap-5 px-10 py-5 bg-white rounded-lg">
-            <FaUserCircle className="text-4xl font-extrabold text-gray-300 " />
+            <FaUserCircle className="text-5xl font-extrabold text-gray-300 " />
             <button
-              className="bg-gray-100 hover:bg-gray-200 text-gray-400 cursor-pointer text-start font-bold py-2 px-28 rounded-full focus:outline-none focus:shadow-outline"
+              className="bg-gray-100 hover:bg-gray-200 w-full text-gray-400 cursor-pointer text-start font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline"
               onClick={() => setShowModal(true)}
             >
               {session ? (
