@@ -1,14 +1,14 @@
 {
   "users": [
-   
+    {
+      "id": "9aae",
+      "username": "Robert",
+      "email": "matundu@gmail.com",
+      "password": "12345678",
+      "password_confirmation": "12345678"
+    }
   ],
-  "posts": [
-    
-  ],
-  "comments": [
-    
-  ],
-  "profile": {
-    
-  }
+  "posts": [],
+  "comments": [],
+  "profile": {}
 }
