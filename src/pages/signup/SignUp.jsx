@@ -108,7 +108,7 @@ export default function SignUp() {
               id="name"
               placeholder="Url de l'image"
               {...register(
-                "urlimage",
+                "photoUser",
                 { required: "Veuillez fournir le lien de votre image" },
                 {
                   pattern: {
