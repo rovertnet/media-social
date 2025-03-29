@@ -59,6 +59,21 @@
       ],
       "auteur": "Gloire",
       "createdAt": "29/03/2025 22:28:36"
+    },
+    {
+      "id": "2b47",
+      "post": "Le développement web est facile, mais il demande beaucoup plus de temps pour atteindre le niveau qu'on car il y a plusieurs niveaux dans le développement que ça soit dans le web tout comme dans le développement des logiciels.\n\nje vous conseille aussi de respecter toutes les étapes cele vous évitera les ennuis.",
+      "urlimage": "https://img.freepik.com/photos-gratuite/programmeur-assis-au-bureau-plusieurs-ecrans-executant-du-code-parlant-collegue-algorithme-intelligence-artificielle-developpeurs-logiciels-realisant-projet-innovant-intelligence-artificielle_482257-40606.jpg?t=st=1743290311~exp=1743293911~hmac=53cf423d53907c4c5ccef19985405e919f6a14dc498aa52d6cc9e63078784ff8&w=1800",
+      "userId": "44aa",
+      "username": "Gloire",
+      "likePost": [
+        0
+      ],
+      "commentPost": [
+        0
+      ],
+      "auteur": "Gloire",
+      "createdAt": "30/03/2025 00:19:25"
     }
   ],
   "comments": [],
