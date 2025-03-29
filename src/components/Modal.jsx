@@ -2,13 +2,35 @@ import React from "react";
 import { IoMdClose } from "react-icons/io";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 const Modal = ({ showModal, setShowModal }) => {
   if (!showModal) return null;
+  const user = JSON.parse(localStorage.getItem("users"));
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = (data) => {
-    toast.success("Votre post a été créé avec succès !");
-    setShowModal(false);
+    const post = {
+      ...data,
+      post: data.post,
+      urlimage: data.urlimage,
+      userId: user.id,
+      username: user.username,
+      likePost: [0],
+      commentPost: [0],
+      auteur: user.username,
+      createdAt: new Date().toLocaleString(),
+    };
+    axios
+      .post("http://localhost:3000/posts", post)
+      .then((response) => {
+        console.log(response.data);
+        toast.success("Post créé avec succès");
+        setShowModal(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        toast.error("Une erreur s'est produite");
+      });
   }
 
   return (

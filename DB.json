@@ -29,7 +29,23 @@
       "password_confirmation": "Rob1234@"
     }
   ],
-  "posts": [],
+  "posts": [
+    {
+      "id": "9a20",
+      "post": "Bonjour !",
+      "urlimage": "https://img.freepik.com/photos-gratuite/concept-collage-html-css-personne_23-2150062008.jpg?t=st=1743280618~exp=1743284218~hmac=d96877b2de9c35f6d068d10def99746b047a4ac8a2c7d717d79df188432babf6&w=1380",
+      "userId": "44aa",
+      "username": "Gloire",
+      "likePost": [
+        0
+      ],
+      "commentPost": [
+        0
+      ],
+      "auteur": "Gloire",
+      "createdAt": "29/03/2025 21:38:02"
+    }
+  ],
   "comments": [],
   "profile": {}
 }

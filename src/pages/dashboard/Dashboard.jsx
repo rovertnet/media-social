@@ -35,7 +35,7 @@ export default function Dashboard() {
               onClick={() => setShowModal(true)}
             >
               {session ? (
-                <>Quoi de neuf {session.username}</>
+                <>Quoi de neuf, {session.username} ?</>
               ) : (
                 <p className="text-lg">Chargement de la session...</p>
               )}
