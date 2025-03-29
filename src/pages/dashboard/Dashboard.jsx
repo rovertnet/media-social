@@ -46,19 +46,19 @@ export default function Dashboard() {
           <div className="flex justify-between px-10 pb-5 items-center gap-5">
             <button className="flex space-x-3.5">
               <IoMdVideocam className="font-extrabold text-red-600 text-5xl" />
-              <h1 className="text-xl font-bold text-gray-500">
+              <h1 className="text-xl font-bold text-gray-500 pt-1.5">
                 Vidéo en directe
               </h1>
             </button>
             <button className="flex space-x-3.5">
               <FaPhotoVideo className="font-extrabold text-green-700 text-5xl" />
-              <h1 className="text-xl font-bold text-gray-500">
+              <h1 className="text-xl font-bold text-gray-500 pt-1.5">
                 Photos/Vidéo
               </h1>
             </button>
             <button className="flex space-x-3.5">
               <MdMood className="font-extrabold text-yellow-500 text-5xl" />
-              <h1 className="text-xl font-bold text-gray-500">
+              <h1 className="text-xl font-bold text-gray-500 pt-1.5">
                 Humeur/Activités
               </h1>
             </button>
