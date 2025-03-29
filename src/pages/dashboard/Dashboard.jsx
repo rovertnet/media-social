@@ -38,6 +38,11 @@ export default function Dashboard() {
             </div>
           <Modal showModal={showModal} setShowModal={setShowModal} />
         </div>
+
+        <hr className='text-gray-400 py-5' />
+        <div className="flex gap-5">
+          <button className=''></button>
+        </div>
       </div>
     </>
   );
