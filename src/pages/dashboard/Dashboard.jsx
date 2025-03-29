@@ -24,8 +24,6 @@ export default function Dashboard() {
 
       <div className="flex items-center justify-center min-h-screen bg-white mt-20">
         <header className="App-header">
-          <h1 className="text-3xl font-bold text-center text-white my-5">Créez un post !</h1>
-          <hr className='text-gray-500' />
           <div className="flex justify-center items-center space-x-2.5">
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
