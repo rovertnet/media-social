@@ -12,10 +12,12 @@ export default function NavBars() {
         <div className="flex justify-between items-center bg-white px-10 py-5 shadow-md">
           <div className="flex items-center space-x-4">
             <Link to="/">
-              <img src={logo} alt="logo" className='h-12 w-32' />
+              <img src={logo} alt="logo" className="h-12 w-32" />
             </Link>
           </div>
-          <h1 className="font-extrabold text-2xl text-orange-400 uppercase">RovertNet Social</h1>
+          <h1 className="font-extrabold text-2xl text-orange-400 uppercase">
+            RovertNet Social
+          </h1>
           <div className="flex space-x-4">
             {session ? (
               <div className="session-info flex space-x-1.5 justify-center items-center">
@@ -25,7 +27,7 @@ export default function NavBars() {
                 </h1>
               </div>
             ) : (
-              <p className="text-lg">Loading session...</p>
+              <p className="text-lg">Chargement de la session...</p>
             )}
           </div>
         </div>

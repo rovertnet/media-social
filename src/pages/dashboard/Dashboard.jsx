@@ -25,7 +25,7 @@ export default function Dashboard() {
                 Bienvenue {session.username}
               </h1>
             ) : (
-              <p className="text-lg">Loading session...</p>
+              <p className="text-lg">Chargement de la session...</p>
             )}
           </div>
         </div>
