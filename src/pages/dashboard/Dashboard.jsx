@@ -7,20 +7,27 @@ import { FaUserCircle } from "react-icons/fa";
 import { IoMdVideocam } from "react-icons/io";
 import { FaPhotoVideo } from "react-icons/fa";
 import { MdMood } from "react-icons/md";
+import axios from 'axios';
 
 
 
 export default function Dashboard() {
   const navigate = useNavigate();
+
   const { session } = useContext(SessionContext);
+  const [showModal, setShowModal] = React.useState(false);
   useEffect(() => {
     const user = localStorage.getItem("users");
     if (!user) {
       navigate("/connexion");
     }
+    axios.get(`http://localhost:3000/posts`).then((response) => {
+      const posts = response.data;
+      localStorage.setItem("posts", JSON.stringify(posts));
+    });
   }, [ navigate ]);
 
-  const [showModal, setShowModal] = React.useState(false);
+  
   
   return (
     <>
@@ -63,6 +70,8 @@ export default function Dashboard() {
               </h1>
             </button>
           </div>
+
+          <div className="bg-white flex "></div>
 
           <Modal showModal={showModal} setShowModal={setShowModal} />
         </div>
