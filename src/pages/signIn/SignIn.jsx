@@ -14,8 +14,9 @@ export default function SignIn() {
     axios.get(`http://localhost:3000/users?email=${data.email}&password=${data.password}`)
       .then((response) => {
         if (response.data.length > 0) {
-          toast.success("Connexion réussie");
+          localStorage.setItem("user", JSON.stringify(response.data[0]));
           Navigate("/");
+          toast.success("Connexion réussie");
         } else {
           toast.error("Identifiants invalides");
         }
