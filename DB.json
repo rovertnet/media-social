@@ -44,6 +44,21 @@
       ],
       "auteur": "Gloire",
       "createdAt": "29/03/2025 21:38:02"
+    },
+    {
+      "id": "36c8",
+      "post": "Bonjour, \n\nJe suis un autre post de Gloire",
+      "urlimage": "https://img.freepik.com/photos-gratuite/personne-devant-ordinateur-travaillant-html_23-2150040428.jpg?t=st=1743283516~exp=1743287116~hmac=610ad672cf0f5e45d0d8539e8f36b5dba7e23feed9fddd29c24df1fc4d5dc0d7&w=1380",
+      "userId": "44aa",
+      "username": "Gloire",
+      "likePost": [
+        0
+      ],
+      "commentPost": [
+        0
+      ],
+      "auteur": "Gloire",
+      "createdAt": "29/03/2025 22:28:36"
     }
   ],
   "comments": [],
