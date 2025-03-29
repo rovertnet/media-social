@@ -34,7 +34,7 @@ export default function Dashboard() {
     <>
       <NavBars />
 
-      <div className="flex justify-center flex-col items-center  py-10 px-64">
+      <div className="flex justify-center flex-col items-center  py-10 px-60">
         <div className=" bg-white mt-20 w-full mx-44 rounded-lg shadow-md">
           <div className="flex justify-between items-center gap-5 px-10 py-5 bg-white rounded-lg">
             <FaUserCircle className="text-5xl font-extrabold text-gray-300 " />
@@ -78,7 +78,7 @@ export default function Dashboard() {
         <div className="flex flex-col gap-5 ">
           <div className="flex justify-start flex-col items-center px-10 py-3  rounded-lg">
             {posts.map((post) => (
-              <div className="bg-white w-full rounded-lg shadow-md my-5 mx-44">
+              <div className="bg-white w-full rounded-lg shadow-md my-5 ">
                 <div key={post.id} className="flex flex-col gap-5 my-5 w-full ">
                   <div className="flex justify-start items-center gap-5 pl-5">
                     <FaUserCircle className="text-6xl font-extrabold text-gray-300" />
@@ -97,6 +97,17 @@ export default function Dashboard() {
                     alt="Post"
                     className="w-full h-auto"
                   />
+                </div>
+                <div className="flex justify-between items-center px-5 py-3">
+                  <button className="bg-gray-100 hover:bg-gray-200 w-full text-gray-400 cursor-pointer text-start font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline">
+                    Commenter
+                  </button>
+                  <button className="bg-gray-100 hover:bg-gray-200 w-full text-gray-400 cursor-pointer text-start font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline">
+                    J'aime
+                  </button>
+                  <button className="bg-gray-100 hover:bg-gray-200 w-full text-gray-400 cursor-pointer text-start font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline">
+                    Partager
+                  </button>
                 </div>
               </div>
             ))}
