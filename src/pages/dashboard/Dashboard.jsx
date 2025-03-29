@@ -75,22 +75,24 @@ export default function Dashboard() {
           <Modal showModal={showModal} setShowModal={setShowModal} />
         </div>
 
-        <div className="bg-white flex flex-col gap-5 py-3.5 my-5 w-full mx-44 rounded-lg shadow-md">
-          <div className="flex justify-start items-center px-10 py-5 bg-white rounded-lg">
+        <div className="flex flex-col gap-5 py-3.5 my-5 w-full mx-44">
+          <div className="flex justify-start flex-col items-center px-10 py-5  rounded-lg">
             {posts.map((post) => (
-              <div key={post.id} className="flex flex-col gap-5 my-5 w-full">
-                <div className="flex justify-start items-center gap-5">
-                  <FaUserCircle className="text-5xl font-extrabold text-gray-300" />
-                  <h1 className="text-xl font-bold text-gray-500 pt-1.5">
-                    {post.auteur}
-                  </h1>
+              <div className="bg-white w-full rounded-lg shadow-md my-10">
+                <div key={post.id} className="flex flex-col gap-5 my-5 w-full ">
+                  <div className="flex justify-start items-center gap-5">
+                    <FaUserCircle className="text-5xl font-extrabold text-gray-300" />
+                    <h1 className="text-xl font-bold text-gray-500 pt-1.5">
+                      {post.auteur}
+                    </h1>
+                  </div>
+                  <p className="text-lg text-gray-700">{post.post}</p>
+                  <img
+                    src={post.urlimage}
+                    alt="Post"
+                    className="w-full h-auto"
+                  />
                 </div>
-                <p className="text-lg text-gray-700">{post.post}</p>
-                <img
-                  src={post.urlimage}
-                  alt="Post"
-                  className="w-full h-auto rounded-lg"
-                />
               </div>
             ))}
           </div>
