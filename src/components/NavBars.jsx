@@ -18,8 +18,8 @@ export default function NavBars() {
           <div className="flex space-x-4">
             {session ? (
               <div className="session-info flex space-x-3.5 justify-center items-center">
-                <FaUserCircle className="text-2xl font-extrabold text-gray-400" />
-                <h1 className="text-2xl font-extrabold mb-4">
+                <FaUserCircle className="text-4xl font-extrabold text-gray-300 " />
+                <h1 className="text-2xl font-extrabold">
                   {session.username}
                 </h1>
               </div>
