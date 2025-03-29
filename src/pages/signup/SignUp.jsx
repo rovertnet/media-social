@@ -119,9 +119,9 @@ export default function SignUp() {
               )}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
-            {errors.urlimage && (
+            {errors.photoUser && (
               <p className="text-red-500 text-xs italic">
-                {errors.urlimage.message}
+                {errors.photoUser.message}
               </p>
             )}
           </div>
