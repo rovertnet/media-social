@@ -75,10 +75,10 @@ export default function Dashboard() {
           <Modal showModal={showModal} setShowModal={setShowModal} />
         </div>
 
-        <div className="flex flex-col gap-5 py-3.5 my-5 w-full mx-44">
-          <div className="flex justify-start flex-col items-center px-10 py-5  rounded-lg">
+        <div className="flex flex-col gap-5 ">
+          <div className="flex justify-start flex-col items-center px-10 py-3  rounded-lg">
             {posts.map((post) => (
-              <div className="bg-white w-full rounded-lg shadow-md my-10 mx-44">
+              <div className="bg-white w-full rounded-lg shadow-md my-5 mx-44">
                 <div key={post.id} className="flex flex-col gap-5 my-5 w-full ">
                   <div className="flex justify-start items-center gap-5 pl-5">
                     <FaUserCircle className="text-6xl font-extrabold text-gray-300" />
