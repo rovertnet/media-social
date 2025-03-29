@@ -76,9 +76,25 @@ export default function SignUp() {
                   value: 3,
                   message: "Le nom doit contenir au moins 3 caractères",
                 },
+                maxLength: {
+                  value: 20,
+                  message: "Le nom doit contenir au maximum 20 caractères",
+                },
+                pattern: {
+                  value: /^[a-zA-Z0-9]+$/i,
+                  message: "Le nom ne doit contenir que des lettres et des chiffres",
+                },
+                validate: (value) => {
+                  const usernameRegex = /^[a-zA-Z0-9]+$/;
+                  return (
+                    usernameRegex.test(value) ||
+                    "Le nom ne doit contenir que des lettres et des chiffres"
+                  );
+                }
               })}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
+            {errors.username && <p className="text-red-500 text-xs italic">{errors.username.message}</p>}
           </div>
 
           <div className="mb-4">
@@ -93,9 +109,17 @@ export default function SignUp() {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
                   message: "Adresse e-mail invalide",
                 },
+                validate: (value) => {
+                  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                  return (
+                    emailRegex.test(value) ||
+                    "Veuillez entrer une adresse e-mail valide"
+                  );
+                }
               })}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
+            {errors.email && <p className="text-red-500 text-xs italic">{errors.email.message}</p>}
           </div>
 
           <div className="mb-4">
