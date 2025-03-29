@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react'
 import { SessionContext } from "../../contexte/SessionContext.jsx";
-import Sidebar from "./../../components/Sidebar.jsx";
 import NavBars from '../../components/NavBars.jsx';
 import { useNavigate } from 'react-router-dom';
 import Modal from '../../components/Modal.jsx';
+import { FaUserCircle } from "react-icons/fa";
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -22,9 +22,10 @@ export default function Dashboard() {
       <NavBars />
       
 
-      <div className="flex items-center justify-center min-h-screen bg-white mt-20">
-        <header className="App-header">
+      <div className="flex items-center justify-center bg-white mt-20">
+        <header className="">
           <div className="flex justify-center items-center space-x-2.5">
+            <FaUserCircle className="text-4xl font-extrabold text-gray-300 " />
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               onClick={() => setShowModal(true)}
