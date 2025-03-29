@@ -43,22 +43,22 @@ export default function Dashboard() {
           </div>
 
           <hr className="text-gray-400 py-5 mx-10" />
-          <div className="flex gap-5">
+          <div className="flex justify-between px-10 pb-5 items-center gap-5">
             <button className="flex space-x-3.5">
-              <IoMdVideocam className="font-extrabold text-red-600 text-3xl" />
-              <h1 className="text-2xl font-extrabold text-gray-500">
+              <IoMdVideocam className="font-extrabold text-red-600 text-5xl" />
+              <h1 className="text-xl font-bold text-gray-500">
                 Vidéo en directe
               </h1>
             </button>
             <button className="flex space-x-3.5">
-              <FaPhotoVideo className="font-extrabold text-green-700 text-3xl" />
-              <h1 className="text-2xl font-extrabold text-gray-500">
+              <FaPhotoVideo className="font-extrabold text-green-700 text-5xl" />
+              <h1 className="text-xl font-bold text-gray-500">
                 Photos/Vidéo
               </h1>
             </button>
             <button className="flex space-x-3.5">
-              <MdMood className="font-extrabold text-yellow-500 text-3xl" />
-              <h1 className="text-2xl font-extrabold text-gray-500">
+              <MdMood className="font-extrabold text-yellow-500 text-5xl" />
+              <h1 className="text-xl font-bold text-gray-500">
                 Humeur/Activités
               </h1>
             </button>
