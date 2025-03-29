@@ -101,17 +101,21 @@ export default function Dashboard() {
                 <div className="flex justify-between items-center px-5 py-3">
                   <button className="bg-gray-100 hover:bg-gray-200 flex space-x-2  text-gray-400 cursor-pointer text-start font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline">
                     <AiOutlineLike className="font-bold text-lg text-gray-400" />
-                    J'aime
+                    <p className="text-lg font-bold text-gray-400">
+                      {post.likePost.length} J'aime
+                    </p>
                   </button>
 
                   <button className="bg-gray-100 hover:bg-gray-200 flex space-x-2 text-gray-400 cursor-pointer text-start font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline">
                     <AiOutlineComment className="font-bold text-lg text-gray-400" />
-                    Commenter
+                    <p className="text-lg font-bold text-gray-400">
+                      {post.commentPost.length} Commentaires
+                    </p>
                   </button>
 
                   <button className="bg-gray-100 hover:bg-gray-200 flex space-x-2 text-gray-400 cursor-pointer text-start font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline">
                     <AiOutlineShareAlt className="font-bold text-lg text-gray-400" />
-                    Partager
+                    <p className="text-lg font-bold text-gray-400">Partager</p>
                   </button>
                 </div>
               </div>
