@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import { SessionContext } from '../contexte/SessionContext';
 import { FaUserCircle } from "react-icons/fa";
-
+import logo from "../assets/logo1.png";
 
 export default function NavBars() {
   const { session } = useContext(SessionContext);
@@ -12,7 +12,7 @@ export default function NavBars() {
         <div className="flex justify-between items-center bg-white px-10 py-5 shadow-md">
           <div className="flex items-center space-x-4">
             <Link to="/">
-              <h1 className="text-2xl font-bold">Logo</h1>
+              <img src={logo} alt="logo" />
             </Link>
           </div>
           <div className="flex space-x-4">
