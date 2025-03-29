@@ -5,6 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import Modal from '../../components/Modal.jsx';
 import { FaUserCircle } from "react-icons/fa";
 import { IoMdVideocam } from "react-icons/io";
+import { FaPhotoVideo } from "react-icons/fa";
+import { MdMood } from "react-icons/md";
+
 
 
 export default function Dashboard() {
@@ -42,16 +45,22 @@ export default function Dashboard() {
           <hr className="text-gray-400 py-5 mx-10" />
           <div className="flex gap-5">
             <button className="flex space-x-3.5">
-              <IoMdVideocam className='font-extrabold text-green-700 text-3xl' />
-              <h1 className="text-2xl font-extrabold text-gray-500">Vidéo en directe</h1>
+              <IoMdVideocam className="font-extrabold text-red-600 text-3xl" />
+              <h1 className="text-2xl font-extrabold text-gray-500">
+                Vidéo en directe
+              </h1>
             </button>
             <button className="flex space-x-3.5">
-              <IoMdVideocam className='font-extrabold text-green-700 text-3xl' />
-              <h1 className="text-2xl font-extrabold text-gray-500">Photos/Vidéo</h1>
+              <FaPhotoVideo className="font-extrabold text-green-700 text-3xl" />
+              <h1 className="text-2xl font-extrabold text-gray-500">
+                Photos/Vidéo
+              </h1>
             </button>
             <button className="flex space-x-3.5">
-              <IoMdVideocam className='font-extrabold text-green-700 text-3xl' />
-              <h1 className="text-2xl font-extrabold text-gray-500">Humeur/Activités</h1>
+              <MdMood className="font-extrabold text-yellow-500 text-3xl" />
+              <h1 className="text-2xl font-extrabold text-gray-500">
+                Humeur/Activités
+              </h1>
             </button>
           </div>
 
