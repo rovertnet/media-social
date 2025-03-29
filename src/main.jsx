@@ -6,7 +6,7 @@ import Dashboard from "./pages/dashboard/Dashboard.jsx"
 import SignUp from './pages/signup/SignUp.jsx'
 import SignIn from './pages/signIn/SignIn.jsx'
 import { Toaster } from 'react-hot-toast'
-import { SessionProvider } from "./context/SessionContext";
+import { SessionProvider } from "../src/contexte/SessionContext.jsx";
 
 const router = createBrowserRouter([
   {
