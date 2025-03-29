@@ -68,9 +68,12 @@ export default function SignIn() {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
                 message: "Adresse e-mail invalide",
               },
-              toast: (value) => {
+              validate: (value) => {
                 if (value) {
-                  toast.error(value.message);
+                  return true;
+                } else {
+                  toast.error("Adresse e-mail invalide");
+                  return false;
                 }
               }
             })}
@@ -93,9 +96,12 @@ export default function SignIn() {
                 value: 8,
                 message: "Le mot de passe doit contenir au moins 8 caractères",
               },
-              toast: (value) => {
+              validate: (value) => {
                 if (value) {
-                  toast.error(value.message);
+                  return true;
+                } else {
+                  toast.error("Mot de passe invalide");
+                  return false;
                 }
               }
             })}
