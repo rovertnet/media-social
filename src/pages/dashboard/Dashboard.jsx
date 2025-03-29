@@ -78,15 +78,20 @@ export default function Dashboard() {
         <div className="flex flex-col gap-5 py-3.5 my-5 w-full mx-44">
           <div className="flex justify-start flex-col items-center px-10 py-5  rounded-lg">
             {posts.map((post) => (
-              <div className="bg-white w-full rounded-lg shadow-md my-10">
+              <div className="bg-white w-full rounded-lg shadow-md my-10 mx-44">
                 <div key={post.id} className="flex flex-col gap-5 my-5 w-full ">
-                  <div className="flex justify-start items-center gap-5">
-                    <FaUserCircle className="text-5xl font-extrabold text-gray-300" />
-                    <h1 className="text-xl font-bold text-gray-500 pt-1.5">
-                      {post.auteur}
-                    </h1>
+                  <div className="flex justify-start items-center gap-5 pl-5">
+                    <FaUserCircle className="text-6xl font-extrabold text-gray-300" />
+                    <div className="flex flex-col gap-1 pb-2">
+                      <h1 className="text-xl font-bold text-gray-500 pt-1.5">
+                        {post.auteur}
+                      </h1>
+                      <p className="text-sm text-gray-400">
+                        {post.createdAt}
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-lg text-gray-700">{post.post}</p>
+                  <p className="text-lg text-gray-700 pl-5">{post.post}</p>
                   <img
                     src={post.urlimage}
                     alt="Post"
