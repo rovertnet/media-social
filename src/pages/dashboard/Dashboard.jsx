@@ -21,6 +21,10 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+
+      <div className="flex flex-col gap-5">
+        <div className=""></div>
+      </div>
     </>
   );
 }
