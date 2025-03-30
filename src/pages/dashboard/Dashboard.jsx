@@ -83,8 +83,20 @@ export default function Dashboard() {
               <div className="bg-white w-full rounded-lg shadow-md my-3 ">
                 <div key={post.id} className="flex flex-col gap-5 my-5 w-full ">
                   <div className="flex justify-start items-center gap-5 pl-5">
-                    <FaUserCircle className="text-6xl font-extrabold text-gray-300" />
-                    
+                    {post.auteur === session.username ? (
+                      <div className="flex space-x-2">
+                        <img
+                          src={session.photoUser}
+                          alt="User"
+                          className="w-12 h-12 rounded-full"
+                        />
+                      </div>
+                    ) : (
+                      <div className="flex space-x-2.5">
+                        <FaUserCircle className="text-6xl font-extrabold text-gray-300" />
+                        
+                      </div>
+                    )}
                     <div className="flex flex-col gap-1 pb-2">
                       <h1 className="text-xl font-bold text-gray-500 pt-1.5">
                         {post.auteur}

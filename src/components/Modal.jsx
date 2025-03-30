@@ -18,6 +18,7 @@ const Modal = ({ showModal, setShowModal }) => {
       likePost: [0],
       commentPost: [0],
       auteur: user.username,
+      image: data.photoUser,
       createdAt: new Date().toLocaleString(),
     };
     axios
