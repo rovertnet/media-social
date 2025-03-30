@@ -30,6 +30,9 @@ export default function Dashboard() {
       setPosts(posts);
     });
   }, [ navigate ]);
+
+  console.log(posts);
+  
   
   return (
     <>
