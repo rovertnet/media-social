@@ -8,7 +8,7 @@ export default function NavBars() {
   const { session } = useContext(SessionContext);
   return (
     <>
-      <div className="fixed top-0 right-0 left-0">
+      <div className="fixed top-0 right-0 left-0 z-30">
         <div className="flex justify-between items-center bg-white px-10 py-5 shadow-md">
           <div className="flex items-center space-x-4">
             <Link to="/">
