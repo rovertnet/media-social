@@ -7,6 +7,7 @@ import SignUp from './pages/signup/SignUp.jsx'
 import SignIn from './pages/signIn/SignIn.jsx'
 import { Toaster } from 'react-hot-toast'
 import { SessionProvider } from "../src/contexte/SessionContext.jsx";
+import { QueryClient,QueryClientProvider } from '@tanstack/react-query'
 
 const router = createBrowserRouter([
   {
