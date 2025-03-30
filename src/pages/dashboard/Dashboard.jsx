@@ -88,7 +88,7 @@ export default function Dashboard() {
           <Modal showModal={showModal} setShowModal={setShowModal} />
         </div>
 
-        <div className="">
+        <div className="flex justify-center items-center">
           <div className="w-full mx-44 py-8 px-4">
             <StoryContainer />
           </div>
