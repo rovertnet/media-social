@@ -29,7 +29,7 @@ const StoryContainer = () => {
   ];
 
   return (
-    <div className="w-full bg-white p-4 rounded-lg shadow-sm ">
+    <div className="w-full bg-white p-4 rounded-lg shadow-md ">
       <div className="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
         <Story
           imageUrl="https://images.unsplash.com/photo-1504297050568-910d24c426d3"
