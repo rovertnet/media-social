@@ -12,6 +12,8 @@ import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineComment } from "react-icons/ai";
 import { AiOutlineShareAlt } from "react-icons/ai";
 import StoryContainer from '../../components/StoryContainer.jsx';
+import { QueryClient, useQuery } from '@tanstack/react-query';
+import loading from "../../assets/loading.gif";
 
 
 export default function Dashboard() {
@@ -31,8 +33,87 @@ export default function Dashboard() {
     });
   }, [ navigate ]);
 
-  console.log(posts);
-  
+  // const queryClient = new QueryClient();
+  const {data:post, isLoading, error} = useQuery({
+    queryKey: ["posts"],
+    queryFn: () =>
+      axios.get("http://localhost:3000/posts").then((res) => res.data),
+      staleTime: 1000 * 60 * 5, // 5 minutes
+      cacheTime: 1000 * 60 * 10, // 10 minutes
+      onerror: (error) => console.log(error),
+    
+  })
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="flex flex-col items-center justify-center">
+          <img
+            src={loading}
+            alt="Loading..."
+            className="w-28 h-28 animate-spin"
+          />
+          <p className="text-lg font-bold text-gray-500 mt-4">Chargement...</p>
+        </div>
+      </div>
+    );
+  } 
+
+  let filteredPosts = post.filter((post) => post.userId === session.id);
+  if (filteredPosts.length === 0) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="flex flex-col items-center justify-center">
+          <p className="text-lg font-bold text-gray-500 mt-4">
+            Aucun post trouvé
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // let posts = post.filter((post) => post.userId === session.id);
+  // if (posts.length === 0) {
+  //   return (
+  //     <div className="flex justify-center items-center h-screen">
+  //       <div className="flex flex-col items-center justify-center">
+  //         <p className="text-lg font-bold text-gray-500 mt-4">Aucun post trouvé</p>
+  //       </div>
+  //     </div>
+  //   );
+  // }
+
+  let postTrierParDate = filteredPosts.sort((a, b) => {
+    return new Date(b.createdAt) - new Date(a.createdAt);
+  });
+  filteredPosts = postTrierParDate.map((post) => {
+    return {
+      ...post,
+      createdAt: new Date(post.createdAt).toLocaleString("fr-FR", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+      }),
+    };
+  });
+
+  // let postTrierParDate = posts.sort((a, b) => {
+  //   return new Date(b.createdAt) - new Date(a.createdAt);
+  // });
+  // posts = postTrierParDate.map((post) => {
+  //   return {
+  //     ...post,
+  //     createdAt: new Date(post.createdAt).toLocaleString("fr-FR", {
+  //       year: "numeric",
+  //       month: "2-digit",
+  //       day: "2-digit",
+  //       hour: "2-digit",
+  //       minute: "2-digit",
+  //     }),
+  //   };
+  // });
+
   
   return (
     <>

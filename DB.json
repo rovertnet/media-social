@@ -35,6 +35,21 @@
       "email": "matundukabamba@gmail.com",
       "password": "Rob1234@",
       "password_confirmation": "Rob1234@"
+    },
+    {
+      "id": "99f2",
+      "post": "Bonjour à toutes et à tous, \n\nSoyez benis",
+      "urlimage": "https://img.freepik.com/photos-gratuite/jeune-homme-afro-americain-assis-yeux-fermes-bible-dans-ses-mains_181624-24395.jpg?t=st=1743363714~exp=1743367314~hmac=9d4d3221afa0659fb30ae3b474764445e7af3ff71d9bd36d8ccfb4a84d18aa90&w=1380",
+      "userId": "44aa",
+      "username": "Gloire",
+      "likePost": [
+        0
+      ],
+      "commentPost": [
+        0
+      ],
+      "auteur": "Gloire",
+      "createdAt": "30/03/2025 20:42:18"
     }
   ],
   "posts": [
@@ -112,6 +127,21 @@
       ],
       "auteur": "Robert",
       "createdAt": "30/03/2025 01:16:24"
+    },
+    {
+      "id": "cd2c",
+      "post": "J euis un autre post",
+      "urlimage": "https://img.freepik.com/photos-premium/web-designer-concevant-ai-generative-personnalisee-visuelle_1169649-5265.jpg?w=1380",
+      "userId": "44aa",
+      "username": "Gloire",
+      "likePost": [
+        0
+      ],
+      "commentPost": [
+        0
+      ],
+      "auteur": "Gloire",
+      "createdAt": "30/03/2025 20:22:38"
     }
   ],
   "comments": [],
