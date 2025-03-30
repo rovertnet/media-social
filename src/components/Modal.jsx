@@ -35,7 +35,7 @@ const Modal = ({ showModal, setShowModal }) => {
   }
 
   return (
-    <div className="fixed inset-0 bg-opacity-50 overflow-y-auto h-full w-full">
+    <div className="fixed inset-0 bg-opacity-50 overflow-y-auto h-full w-full z-30">
       <div className="relative top-28 mx-44 p-5 border shadow-lg rounded-md bg-white">
         <div className="mt-3 text-center">
           <div className="flex justify-between">
