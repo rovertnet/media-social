@@ -39,7 +39,19 @@ export default function Dashboard() {
       <div className="flex justify-center flex-col items-center  py-10 px-60">
         <div className=" bg-white mt-20 w-full mx-44 rounded-lg shadow-md">
           <div className="flex justify-between items-center gap-5 px-10 py-5 bg-white rounded-lg">
-            <FaUserCircle className="text-5xl font-extrabold text-gray-300 " />
+            {session && session.username ? (
+              <div className="flex flex-col gap-1 pb-2">
+                <img
+                  src={session.photoUser}
+                  alt="User"
+                  className="w-12 h-12 rounded-full"
+                />
+              </div>
+            ) : (
+              <div className="flex flex-col gap-1 pb-2">
+                <FaUserCircle className="text-6xl font-extrabold text-gray-300" />
+              </div>
+            )}
             <button
               className="bg-gray-100 hover:bg-gray-200 w-full text-gray-400 cursor-pointer text-start font-bold py-2 px-5 rounded-full focus:outline-none focus:shadow-outline"
               onClick={() => setShowModal(true)}
@@ -94,7 +106,6 @@ export default function Dashboard() {
                     ) : (
                       <div className="flex space-x-2.5">
                         <FaUserCircle className="text-6xl font-extrabold text-gray-300" />
-                        
                       </div>
                     )}
                     <div className="flex flex-col gap-1 pb-2">

@@ -97,6 +97,21 @@
       ],
       "auteur": "Robert",
       "createdAt": "30/03/2025 00:35:44"
+    },
+    {
+      "id": "4a5e",
+      "post": "Le développement web consiste à créer et maintenir des sites internet et des applications en ligne. Il englobe plusieurs disciplines telles que la conception de l'interface utilisateur (UI),",
+      "urlimage": "https://img.freepik.com/vecteurs-libre/arriere-plan-degrade-ui-ux_23-2149052117.jpg?t=st=1743293752~exp=1743297352~hmac=a657b78a66d9dd1b5dda518af884d6d391b0678c38a58ea238ad6589c9099252&w=1380",
+      "userId": "5b93",
+      "username": "Robert",
+      "likePost": [
+        0
+      ],
+      "commentPost": [
+        0
+      ],
+      "auteur": "Robert",
+      "createdAt": "30/03/2025 01:16:24"
     }
   ],
   "comments": [],
