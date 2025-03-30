@@ -11,6 +11,7 @@ import axios from 'axios';
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineComment } from "react-icons/ai";
 import { AiOutlineShareAlt } from "react-icons/ai";
+import StoryContainer from '../../components/StoryContainer.jsx';
 
 
 export default function Dashboard() {
@@ -85,6 +86,16 @@ export default function Dashboard() {
           </div>
 
           <Modal showModal={showModal} setShowModal={setShowModal} />
+        </div>
+
+        <div className="min-h-screen bg-gray-100">
+          <div className="max-w-4xl mx-auto py-8 px-4">
+            <StoryContainer />
+          </div>
+        </div>
+
+        <div className="flex justify-center items-center mt-10 mb-5">
+          <h1 className="text-3xl font-bold text-gray-500">Publications</h1>
         </div>
 
         <div className="flex flex-col gap-5 ">
