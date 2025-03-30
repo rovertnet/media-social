@@ -58,18 +58,18 @@ export default function Dashboard() {
     );
   } 
 
-  let filteredPosts = post.filter((post) => post.userId === session.id);
-  if (filteredPosts.length === 0) {
-    return (
-      <div className="flex justify-center items-center h-screen">
-        <div className="flex flex-col items-center justify-center">
-          <p className="text-lg font-bold text-gray-500 mt-4">
-            Aucun post trouvé
-          </p>
-        </div>
-      </div>
-    );
-  }
+  // let filteredPosts = post.filter((post) => post.userId === session.id);
+  // if (filteredPosts.length === 0) {
+  //   return (
+  //     <div className="flex justify-center items-center h-screen">
+  //       <div className="flex flex-col items-center justify-center">
+  //         <p className="text-lg font-bold text-gray-500 mt-4">
+  //           Aucun post trouvé
+  //         </p>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   // let posts = post.filter((post) => post.userId === session.id);
   // if (posts.length === 0) {
@@ -82,21 +82,21 @@ export default function Dashboard() {
   //   );
   // }
 
-  let postTrierParDate = filteredPosts.sort((a, b) => {
+  let postTrierParDate = post.sort((a, b) => {
     return new Date(b.createdAt) - new Date(a.createdAt);
   });
-  filteredPosts = postTrierParDate.map((post) => {
-    return {
-      ...post,
-      createdAt: new Date(post.createdAt).toLocaleString("fr-FR", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-      }),
-    };
-  });
+  // filteredPosts = postTrierParDate.map((post) => {
+  //   return {
+  //     ...post,
+  //     createdAt: new Date(post.createdAt).toLocaleString("fr-FR", {
+  //       year: "numeric",
+  //       month: "2-digit",
+  //       day: "2-digit",
+  //       hour: "2-digit",
+  //       minute: "2-digit",
+  //     }),
+  //   };
+  // });
 
   // let postTrierParDate = posts.sort((a, b) => {
   //   return new Date(b.createdAt) - new Date(a.createdAt);
@@ -180,7 +180,7 @@ export default function Dashboard() {
 
         <div className="flex flex-col gap-5 ">
           <div className="flex justify-start flex-col items-center px-10 py-3  rounded-lg">
-            {posts.map((post) => (
+            {posts && postTrierParDate.map((post) => (
               <div className="bg-white w-full rounded-lg shadow-md my-3 ">
                 <div key={post.id} className="flex flex-col gap-5 my-5 w-full ">
                   <div className="flex justify-start items-center gap-5 pl-5">
