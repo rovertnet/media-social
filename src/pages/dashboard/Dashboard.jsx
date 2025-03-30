@@ -89,7 +89,7 @@ export default function Dashboard() {
         </div>
 
         <div className="">
-          <div className="w-full mx-auto py-8 px-4">
+          <div className="w-full mx-44 py-8 px-4">
             <StoryContainer />
           </div>
         </div>
