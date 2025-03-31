@@ -12,7 +12,16 @@ const Modal = ({ showModal, setShowModal }) => {
 
   const mutation = useMutation({
     mutationFn: (post) => {
-      return axios.post("http://localhost:3000/users", post);
+      return axios.post("http://localhost:3000/posts", post);
+    },
+
+    onError: (error) => {
+      toast.error("Une erreur est survenue lors de la création du post");
+      console.error(error);
+    },
+    onSuccess: () => {
+      toast.success("Post créé avec succès");
+      setShowModal(false);
     },
   });
 
@@ -29,16 +38,7 @@ const Modal = ({ showModal, setShowModal }) => {
       image: data.photoUser,
       createdAt: new Date().toLocaleString(),
     };
-    mutation.mutate(post, {
-      onSuccess: () => {
-        toast.success("Post créé avec succès");
-        setShowModal(false);
-      },
-      onError: (error) => {
-        toast.error("Une erreur est survenue lors de la création du post");
-        console.error(error);
-      },
-    });
+    mutation.mutate(post);
   }
 
   return (
