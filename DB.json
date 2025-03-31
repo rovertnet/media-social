@@ -50,6 +50,21 @@
       ],
       "auteur": "Gloire",
       "createdAt": "30/03/2025 20:42:18"
+    },
+    {
+      "id": "f9c9",
+      "post": "Excellent mois d'avril les amis et connaissances",
+      "urlimage": "https://img.freepik.com/photos-gratuite/calme-spirituel-beau-mec-africain-priant-yeux-fermes_1262-12246.jpg?t=st=1743436596~exp=1743440196~hmac=437a122bd4c2212a2e84ae97f67f5de6af13a24162eb938e799c76627d42bcb0&w=1380",
+      "userId": "5b93",
+      "username": "Robert",
+      "likePost": [
+        0
+      ],
+      "commentPost": [
+        0
+      ],
+      "auteur": "Robert",
+      "createdAt": "31/03/2025 16:56:52"
     }
   ],
   "posts": [

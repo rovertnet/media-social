@@ -113,7 +113,8 @@ export default function Dashboard() {
   //     }),
   //   };
   // });
-
+  
+  console.log(session);
   
   return (
     <>
