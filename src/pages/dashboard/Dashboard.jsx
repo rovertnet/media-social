@@ -39,7 +39,6 @@ export default function Dashboard() {
     queryFn: () =>
       axios.get("http://localhost:3000/posts").then((res) => res.data),
       staleTime: 1000 * 60 * 5, // 5 minutes
-      cacheTime: 1000 * 60 * 10, // 10 minutes
       onerror: (error) => console.log(error),
     
   })
