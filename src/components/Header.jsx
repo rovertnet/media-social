@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import motion  from "framer-motion";
+import { motion } from "framer-motion";
 import { Menu, X, Home, Info, Mail, User } from "lucide-react";
 
 const navItems = [
