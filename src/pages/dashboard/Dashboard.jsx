@@ -14,6 +14,7 @@ import { AiOutlineShareAlt } from "react-icons/ai";
 import StoryContainer from '../../components/StoryContainer.jsx';
 import { QueryClient, useQuery } from '@tanstack/react-query';
 import loading from "../../assets/loading.gif";
+import Navbar from '../../components/Header.jsx';
 
 
 export default function Dashboard() {
@@ -117,7 +118,7 @@ export default function Dashboard() {
   
   return (
     <>
-      <NavBars />
+      <Navbar />
 
       <div className="flex justify-center flex-col items-center  py-10 px-60">
         <div className=" bg-white mt-20 w-full mx-44 rounded-lg shadow-md">
