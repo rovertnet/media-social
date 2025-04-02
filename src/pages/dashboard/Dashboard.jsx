@@ -118,7 +118,7 @@ export default function Dashboard() {
   
   return (
     <>
-      <Navbar />
+      <Navbars />
 
       <div className="flex justify-center flex-col items-center  py-10 px-60">
         <div className=" bg-white mt-20 w-full mx-44 rounded-lg shadow-md">
