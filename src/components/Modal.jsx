@@ -3,14 +3,14 @@ import { IoMdClose } from "react-icons/io";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import axios from "axios";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 const Modal = ({ showModal, setShowModal }) => {
   if (!showModal) return null;
   const user = JSON.parse(localStorage.getItem("users"));
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const queryClient = useQuery();
+  const useQuery = useQueryClient();
 
   const mutation = useMutation({
     mutationFn: (post) => {
@@ -18,10 +18,11 @@ const Modal = ({ showModal, setShowModal }) => {
     },
 
     onError: (error) => {
-      reset()
+      
       toast.error("Une erreur est survenue lors de la création du post");
     },
     onSuccess: () => {
+      useQuery.invalidateQueries(["posts"]);
       toast.success("Post créé avec succès");
       setShowModal(false);
     },

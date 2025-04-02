@@ -187,6 +187,21 @@
       ],
       "auteur": "Robert",
       "createdAt": "31/03/2025 22:33:16"
+    },
+    {
+      "id": "3c24",
+      "post": "Salut tout le monde !",
+      "urlimage": "https://img.freepik.com/photos-gratuite/personnes-beneficiant-boisson-au-guarana-exterieur_23-2150765672.jpg?t=st=1743598076~exp=1743601676~hmac=88886468182579129fbb9171c2084fd05802e6ebbcea4c94bc18c999ba77bfea&w=1380",
+      "userId": "9aae",
+      "username": "Robert",
+      "likePost": [
+        0
+      ],
+      "commentPost": [
+        0
+      ],
+      "auteur": "Robert",
+      "createdAt": "02/04/2025 13:48:17"
     }
   ],
   "comments": [],
